@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Landscape layout: layout‑land for phone rotated horizontal screen -->
+<!-- layout-sw600dp: layout for tablet devices (smallest width >=600dp) -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:padding="16dp">
+    android:padding="32dp">
 
-    <!-- Left section: titles area, take 40% of screen width -->
+    <!-- Left pane for titles -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="0.4"
+        android:layout_weight="1"
         android:orientation="vertical"
         android:gravity="center">
 
@@ -19,33 +19,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lab 1"
-            android:textSize="22sp"
-            android:layout_marginBottom="24dp"/>
+            android:textSize="28sp"
+            android:layout_marginBottom="40dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Responsive Layout 1"
-            android:textSize="18sp"
-            android:layout_marginBottom="32dp"/>
+            android:textSize="24sp"
+            android:layout_marginBottom="40dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Android Application"
-            android:textSize="20sp"/>
+            android:textSize="24sp"/>
     </LinearLayout>
 
-    <!-- Right section: colour blocks + buttons, take 60% screen width -->
+    <!-- Right pane for color blocks and buttons -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="0.6"
-        android:orientation="vertical">
+        android:layout_weight="1.2"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="120dp"
             android:orientation="horizontal">
 
             <TextView
@@ -54,6 +55,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="This"
+                android:textSize="20sp"
                 android:textColor="#FFFFFF"
                 android:background="#FF0000"/>
 
@@ -63,6 +65,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="is"
+                android:textSize="20sp"
                 android:textColor="#FFFFFF"
                 android:background="#0000FF"/>
 
@@ -72,6 +75,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="my"
+                android:textSize="20sp"
                 android:textColor="#FFFFFF"
                 android:background="#663399"/>
 
@@ -81,30 +85,32 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="first"
+                android:textSize="20sp"
                 android:textColor="#000000"
                 android:background="#FFFF00"/>
         </LinearLayout>
 
-        <!-- Buttons at bottom right area -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="24dp">
+            android:layout_marginTop="40dp">
 
             <Button
                 android:id="@+id/btnChange"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Change"
-                android:layout_marginEnd="16dp"/>
+                android:textSize="18sp"
+                android:layout_marginEnd="24dp"/>
 
             <Button
                 android:id="@+id/btnCancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cancel"/>
+                android:text="Cancel"
+                android:textSize="18sp"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
